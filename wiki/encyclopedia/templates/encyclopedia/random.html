@@ -1,0 +1,8 @@
+{% extends "encyclopedia/link_layout.html" %} <!-- Demonstrating template inheritance - Child Template-->
+
+    {% block title %}Random{% endblock %}
+
+    {% block body %}
+        <h2>Random Page</h2>
+        <h2><a href="wiki/{{ randomEntry }}">{{ randomEntry }}</a></h2>
+    {% endblock %}

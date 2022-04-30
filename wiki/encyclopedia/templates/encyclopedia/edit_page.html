@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ TITLE }}</title>
+        <link rel="stylesheet" href="{% static 'encyclopedia/edit_styles.css' %}">
+    </head>
+
+    <body>
+        <div id="Edit_Page_Section"> <!--Edit Page Section Starts-->
+
+            <div class="Link_Section"> <!--Link Section Starts-->
+                <a href="{% url 'encyclopedia:index' %}">Home</a>
+                <a href="{% url 'encyclopedia:new_page' %}">Create New Page</a>
+            </div> <!--Link Section Ends-->
+            <hr />
+
+            <h2>Edit an existing encyclopedia entry</h2>
+            <br />
+            <form method="post">
+                {% csrf_token %}
+                <textarea id="Text_Area"  name="editContent" rows="15" cols="80">{{ originalContent | safe }}</textarea>
+                <br />
+                <input id="submit_button" type="submit">
+            </form>
+
+        </div> <!-- Edit Page Section Ends-->
+    </body>
+</html>

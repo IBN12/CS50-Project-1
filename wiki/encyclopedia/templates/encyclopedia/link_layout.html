@@ -1,0 +1,23 @@
+{% load static %} <!-- Base Template -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'encyclopedia/link_styles.css' %}">
+    </head>
+
+    <body>
+        <div id="Main_Section"> <!--Main Section Starts-->
+            <div class="Link_Section"> <!--Link Section Starts -->
+                <a class="Certain_Links" href="{% url 'encyclopedia:index' %}">Home</a>
+                <a class="Certain_Links" href="{% url 'encyclopedia:new_page' %}">Create New Page</a>
+            </div> <!--Link Section Ends-->
+            <hr />
+            {% block body %}
+            {% endblock %}
+        </div> <!--Main Section Ends-->
+    </body>
+</html>
+
+<!-- This base template was just for practice.
+Child Templates: link_layout.html -->

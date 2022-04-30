@@ -1,0 +1,60 @@
+/* Create_New_Page_Section - Entire section/page for create a new page. */
+#Create_New_Page_Section{
+    /* background-color: coral; */
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* Home_Link_Section - The home link section at the top of the page. */
+.Link_Section{
+    background-color:rgba(87, 192, 192, 0.425);
+    margin-bottom:10px;
+    padding-top:15px;
+    padding-right: 100px;
+    height:50px;
+    text-align:right;
+    font-size: 25px;
+}
+
+/* a - Hyperlinks for the home page. */
+a{
+    text-decoration:none;
+    color:black;
+    margin-right:20px;
+}
+a:hover{
+    text-decoration:underline;
+}
+
+/* hr - Line below the Home_Link_Section */
+hr{
+    border: 2px solid black;
+    margin-top:-8px;
+}
+
+/* New_Page_Text_Box - Where the user will enter a new page name */
+.New_Page_Text_Box{
+    display: block;
+    width: 250px;
+    height: 25px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* Content_Text_Area - Where the user will enter content for the new page */
+.Content_Text_Area{
+    font-family:sans-serif;
+    font-size: 15px;
+}
+
+/* submit_button - The submit button for the new page text box and textarea */
+#submit_button{
+    width: 150px;
+    height: 30px;
+    font:bold 16px Verdana;
+    border: 1px outset;
+    background-color:rgba(87, 192, 192, 0.425);
+}
+#submit_button:hover{
+    background-color:rgba(87, 192, 192, 0.575);
+}

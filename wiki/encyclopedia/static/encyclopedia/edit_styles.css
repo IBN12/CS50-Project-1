@@ -1,0 +1,49 @@
+/* Edit_Page_Section - Main section for the page */
+#Edit_Page_Section{
+    padding: 10px;
+    font-size: 23px;
+}
+
+/* Link_Section - Will contain hyperlinks */
+.Link_Section{
+    background-color:rgba(87, 192, 192, 0.425);
+    margin-bottom:10px;
+    padding-top:15px;
+    padding-right: 100px;
+    height:50px;
+    text-align:right;
+}
+
+/* a - Hyperlinks for each page */
+a{
+    text-decoration: none;
+    color:black;
+    margin-right: 20px;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+/* hr - Line below the link section */
+hr{
+    border: 2px solid black;
+    margin-top:-8px;
+}
+
+/* Text_Area - Textarea for the users to edit the original content. */
+#Text_Area{
+    font-family:sans-serif;
+    font-size: 15px;
+}
+
+/* submit_button - The submit button for the new page text box and textarea */
+#submit_button{
+    width: 150px;
+    height: 30px;
+    font:bold 16px Verdana;
+    border: 1px outset;
+    background-color:rgba(87, 192, 192, 0.425);
+}
+#submit_button:hover{
+    background-color:rgba(87, 192, 192, 0.575);
+}

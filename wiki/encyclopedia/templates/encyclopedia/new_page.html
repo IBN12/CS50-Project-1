@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Create New Page</title>
+        <link rel="stylesheet" href="{% static 'encyclopedia/new_styles.css' %}">
+    </head>
+
+    <body> 
+        <div id="Create_New_Page_Section"> <!-- Create New Section Begins -->
+
+            <div class="Link_Section"> <!-- Home Link Section Begins -->
+                <a href="{% url 'encyclopedia:index' %}">Home</a>
+                <a href="{% url 'encyclopedia:new_page' %}">Create New Page</a>
+            </div> <!-- Home Link Section Ends-->
+            <hr />
+
+            {% if pageAlreadyExist == True %}
+                <h2>{{ pageMessage }}</h2>
+            {% else %}
+                <h1> Create A New Page </h1>
+                <form method="post">
+                    <p>Create a new title for the page in the top text box, and content for
+                        the page in the text area.
+                    </p>
+                    {% csrf_token %}
+                    {{ newPageForm }}
+                    <br />
+                    <input id="submit_button" type="submit">
+                </form>
+            {% endif %}
+
+        </div> <!-- Create New Section Ends-->
+    </body>
+</html>

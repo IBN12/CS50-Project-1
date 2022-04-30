@@ -1,0 +1,37 @@
+/* Main_Section - The Main Section */
+#Main_Section{
+    padding: 10px;
+    font-size: 20px;
+    font-family:sans-serif;
+}
+
+/* Link_Section - Main section will contain a link section */
+.Link_Section{
+    background-color:rgba(87, 192, 192, 0.425);
+    margin-bottom:10px;
+    padding-top:15px;
+    padding-right: 100px;
+    height:50px;
+    text-align:right;
+}
+
+/* Certain_Links - The 'home' and 'create new page' links */
+.Certain_Links{
+    color: black;
+}
+
+/* a - Hyperlinks in the link section */
+a{
+    text-decoration:none;
+    margin-right:20px;
+}
+a:hover{
+    text-decoration:underline;
+    color:black;
+}
+
+/* hr - Line below the link section */
+hr{
+    border: 2px solid black;
+    margin-top:-8px;
+}

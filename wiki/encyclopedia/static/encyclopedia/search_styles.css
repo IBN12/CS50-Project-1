@@ -1,0 +1,38 @@
+/* TITLE_Search_Section - The main section for the link and message. */
+#TITLE_Search_Section{
+    /* background-color:coral; */
+    padding: 10px;
+    font-size:20px;
+    font-family:sans-serif;
+}
+
+/* Home_Link_Section - This section will contain the home link. */
+.Link_Section{
+    background-color:rgba(87, 192, 192, 0.425);
+    margin-bottom:10px;
+    padding-top:15px;
+    padding-right: 100px;
+    height:50px;
+    text-align:right;
+}
+
+/* Certain_Links - The 'home' and 'create new page' links */
+.Certain_Links{
+    color: black;
+}
+
+/* a - Hyperlinks for the home page and TITLE. */
+a{
+    text-decoration: none;
+    margin-right:20px;
+}
+a:hover{
+    text-decoration:underline;
+    color: black;
+}
+
+/* hr - Line below the Home_Link_Section. */
+hr{
+    border: 2px solid black;
+    margin-top:-8px;
+}

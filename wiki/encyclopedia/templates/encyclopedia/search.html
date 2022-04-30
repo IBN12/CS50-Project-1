@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ TITLE}}</title>
+        <link rel="stylesheet" href="{% static 'encyclopedia/search_styles.css' %}">
+    </head>
+
+    <body>
+        <div id="TITLE_Search_Section"> <!--Title Search Starts-->
+        {% if correctEntry %}
+            <div class="Link_Section"> <!--Link Section Starts-->
+                <a class="Certain_Links" href="{% url 'encyclopedia:index' %}">Home</a>
+                <a class="Certain_Links" href="{% url 'encyclopedia:new_page' %}">Create New Page</a>
+            </div> <!--Link Section Ends-->
+            <hr />
+
+            <h2>{{htmlContent | safe}}</h2>
+            <a href="{% url 'encyclopedia:edit_page' TITLE%}">Edit Page</a>
+        {% else %}
+            <div class="Link_Section"> <!--Link Section Starts-->
+                <a class="Certain_Links" href="{% url 'encyclopedia:index' %}">Home</a>
+                <a class="Certain_Links" href="{% url 'encyclopedia:new_page' %}">Create New Page</a>
+            </div> <!--Link Section Ends-->
+            <hr />
+
+            <h1>Search Results</h1>
+            {% if entryListResult|length == 0 %}
+                <h2>No possible results</h2>
+            {% else %}
+                <h2>Possible results</h2>
+                <ul>
+                    {% for entries in entryListResult %}
+                        <li><a href="wiki/{{entries}}">{{ entries }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endif %}
+        </div> <!-- Title Search Ends-->
+    </body>
+</html>
